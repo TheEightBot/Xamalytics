@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using Splat;
+using System.Collections.Generic;
 
 namespace Xamalytics.Pages
 {
@@ -60,19 +61,25 @@ namespace Xamalytics.Pages
 
 		void Login_Clicked (object sender, EventArgs e)
 		{
-			Task.Run (() => {
-				var analyticsServices = Splat.Locator.CurrentMutable.GetServices<Interfaces.IAnalytics> ();
+			if (string.IsNullOrEmpty (_username.Text))
+				return;
 
-				foreach (var analyticsService in analyticsServices)
+			Task.Run (() => {
+				var analyticsServices = Locator.CurrentMutable.GetServices<Interfaces.IAnalytics> ();
+
+				foreach (var analyticsService in analyticsServices) {
+					analyticsService.SetUser (_username.Text, new Dictionary<string, string>());
+
 					analyticsService.LogEvent (
 						this.Title,
 						"User Interaction",
 						"Login Attempted",
 						string.Empty
 					);
+				}
 			});
 
-			this.Navigation.PushAsync (new HomePage ());
+			this.Navigation.PushAsync (new HomePage (_username.Text));
 		}
 	}
 }

@@ -15,7 +15,7 @@ namespace Xamalytics.Pages
 
 		StackLayout _mainStack;
 
-		public HomePage () : base("HomePage")
+		public HomePage (string username) : base("HomePage")
 		{
 			_mainScroll = new ScrollView {
 				HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -31,7 +31,8 @@ namespace Xamalytics.Pages
 			_mainScroll.Content = _mainStack;
 
 			_homepageTitle = new Label {
-				Text = "Welcome"
+				Text = "Welcome, " + username + "!",
+				HorizontalOptions = LayoutOptions.CenterAndExpand
 			};
 			_mainStack.Children.Add (_homepageTitle);
 

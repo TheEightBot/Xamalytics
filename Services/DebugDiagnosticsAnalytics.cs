@@ -27,9 +27,7 @@ namespace Xamalytics.Services
 
 		public void Init ()
 		{
-			#if DEBUG
-			this.Enabled = _isDebug = true;
-			#endif
+			this.Enabled = _isDebug = System.Diagnostics.Debugger.IsAttached;
 		}
 
 		public void SetUser (string identifier, Dictionary<string, string> userProperties)

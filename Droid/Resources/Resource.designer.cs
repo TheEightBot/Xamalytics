@@ -4244,9 +4244,6 @@ namespace Xamalytics.Droid
 			// aapt resource value: 0x7f0b0021
 			public const int decline = 2131427361;
 			
-			// aapt resource value: 0x7f0b0047
-			public const int google_analytics_api_key = 2131427399;
-			
 			// aapt resource value: 0x7f0b0044
 			public const int library_name = 2131427396;
 			

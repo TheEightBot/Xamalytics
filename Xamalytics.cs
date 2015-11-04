@@ -16,14 +16,14 @@ namespace Xamalytics
 
 			Locator.CurrentMutable.RegisterLazySingleton (
 				() => new Services.AmazonMobileAnalytics (
-					"a69895408bb44e12b2f337c1ca83d73b",
-					"us-east-1:516be1a8-c194-4023-b871-38006daeff18"
+					"",
+					""
 				),
 				typeof(Interfaces.IAnalytics));
 
 			Locator.CurrentMutable.RegisterLazySingleton (
 				() => new Services.SegmentAnalyticsAnalytics (
-					"TMMvkyWonaLJ7jQkQDuyvkL9ceMgsBA6"
+					""
 				),
 				typeof(Interfaces.IAnalytics));
 
@@ -34,7 +34,8 @@ namespace Xamalytics
 
 			// The root page of your application
 			MainPage = new NavigationPage(new Pages.Login()) { 
-				BarBackgroundColor = Color.FromRgb(128, 210, 240) 
+				BarBackgroundColor = Color.FromRgb(1, 61, 100),
+				BarTextColor = Color.White
 			};
 		}
 

@@ -9,7 +9,7 @@ namespace Xamalytics.Interfaces
 
 		void Init();
 
-		void SetUser(string identifier, Dictionary<string, string> userProperties);
+		void SetUser(string identifier, Dictionary<string, string> userProperties = null);
 
 		void LogViewLoaded (string name);
 

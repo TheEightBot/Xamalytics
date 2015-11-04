@@ -115,5 +115,11 @@
     <Folder Include="Constants\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\dualshock.png" />
+    <EmbeddedResource Include="Images\play.png" />
+    <EmbeddedResource Include="Images\xbox-one.png" />
   </ItemGroup>
 </Project>

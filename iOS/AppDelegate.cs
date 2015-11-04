@@ -18,19 +18,19 @@ namespace Xamalytics.iOS
 			Locator.CurrentMutable.RegisterLazySingleton (
 				() => new Services.XamarinInsightsAnalytics (() =>
 					Xamarin.Insights.Initialize(
-						"0ebf745cf404d091722aeddadab8d87036c74093")
+						"")
 				),
 				typeof(Interfaces.IAnalytics));
 
 			Locator.CurrentMutable.RegisterLazySingleton(
 				() => new Xamalytics.Services.iOS.GoogleAnalyticsAnalytics(
-					"UA-69546843-1"), 
+					""), 
 				typeof(Interfaces.IAnalytics));
 
 			Locator.CurrentMutable.RegisterLazySingleton(
 				() => new Xamalytics.Services.iOS.ParseAnalyticsAnalytics(
-					"9ZKqtWPpTrhU7rUmhmacx7g5TeK3KSo9ppid1bGt", 
-					"mTNndKp45OPNhPMG3J9LdDzqA6Xk8KtMI3oDBIGU"), 
+					"", 
+					""), 
 				typeof(Interfaces.IAnalytics));
 
 			// Code for starting up the Xamarin Test Cloud Agent
