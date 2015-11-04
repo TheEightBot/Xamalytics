@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="googleanalytics">
+  <name>Google Analytics</name>
+  <publisher>Xamarin Inc</publisher>
+  <publisher-url>https://xamarin.com</publisher-url>
+  <src-url>https://developers.google.com/analytics/devguides/collection/ios/v3/</src-url>
+  <version>3.0.12</version>
+  <summary>Google Mobile App Analytics enables the measurement of user acquisition, engagement, and outcomes in native mobile apps.</summary>
+  <samples>
+    <sample id="CuteAnimalsiOS">
+      <name>iOS Unified Sample</name>
+      <summary>iOS Unified Sample</summary>
+    </sample>
+    <sample id="CuteAnimalsiOS-Classic">
+      <name>iOS Classic Sample</name>
+      <summary>iOS Classic Sample</summary>
+    </sample>
+  </samples>
+</component>
